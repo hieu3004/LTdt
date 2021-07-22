@@ -29,7 +29,7 @@
 		<div class="container">
 			<div class="navbar-header"  >
                 <h1 style="margin-top: -5px;">
-                <a href="index.php" style="font-family: 'Times New Roman', Times, serif;">OTAKU</a></h1>
+                <a href="index.php" style="font-family: 'Times New Roman', Times, serif;">Noi that</a></h1>
 			</div>
 			<div class="navbar-collapse collapse">
 				     
@@ -49,42 +49,40 @@
     </div>
 	<!-- /.menu -->
     <!-- thông tin -->
-    <div class="container"  class="news-box top-margin"style="background-color: whitesmoke ; height:700px; float:center;" >
-        <form action="" style="background-color: whitesmoke ;margin-left:200px; " method="post">
-            <table style=" float:center;">
-
-                <thead>
-                    <img style="width:150px; height:150px; margin-top: 100px;" src="assets/images/<?php echo $_SESSION['khachhang']['hinh']?>" alt="">
-                </thead>
-                <br>
-                <thead  style="height:150px;">
-                    <th>ID</th>
-                    <th><input type="text" name="" value="<?php echo $_SESSION['khachhang']['makhachhang']?>" id=""></th>
-                </thead><br>
-                <thead style="height:150px;">
-                    <th>tên</th>
-                    <th><input type="text" name="" value="<?php echo $_SESSION['khachhang']['tenkhachhang']?>" id=""></th>
-                </thead><br>
-                <thead style="height:150px;">
-                    <th>số điện thoại</th>
-                    <th><input type="text" name="" value="<?php echo $_SESSION['khachhang']['sdt']?>" id=""></th>
-                </thead><br>
-                <thead style="height:150px;">
-                    <th>Email</th>
-                    <th><input type="text" name="" value="<?php echo $_SESSION['khachhang']['email']?>" id=""></th>
-                </thead><br>
-                <thead style="height:150px;">
-                    <th>địa chỉ</th>
-                    <th><input type="text" name="" value="<?php echo $_SESSION['khachhang']['diachi']?>" id=""></th>
-                </thead><br>
-                <thead style="height:150px;">
-                    <th><a href="logout.php">Đăng Xuất</a></th>
-                    <th></th>
-                </thead><br>
-                <thead>
-                    <th></th>
-                    <th></th>
-                </thead>
+    <div class="container"  class="news-box top-margin"style="background-color: whitesmoke ; float:center;" >
+        <form action="" style="background-color: whitesmoke ; float:center; height:500px;" method="post">
+            <table style="background-color: whitesmoke ; float:center;">
+                <tr>
+                    <img style="width:150px; height:150px;" src="assets/images/<?php echo $_SESSION['khachhang']['hinh']?>" alt="">
+                </tr>
+                <tr>
+                    <td>ID</td>
+                    <td><input type="text" name="" value="<?php echo $_SESSION['khachhang']['makhachhang']?>" id=""></td>
+                </tr>
+                <tr>
+                    <td>tên</td>
+                    <td><input type="text" name="" value="<?php echo $_SESSION['khachhang']['tenkhachhang']?>" id=""></td>
+                </tr>
+                <tr>
+                    <td>số điện thoại</td>
+                    <td><input type="text" name="" value="<?php echo $_SESSION['khachhang']['sdt']?>" id=""></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" name="" value="<?php echo $_SESSION['khachhang']['email']?>" id=""></td>
+                </tr>
+                <tr>
+                    <td>địa chỉ</td>
+                    <td><input type="text" name="" value="<?php echo $_SESSION['khachhang']['diachi']?>" id=""></td>
+                </tr>
+                <tr>
+                    <td><a href="logout.php">Đăng Xuất</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
             </table>
         
         </form>

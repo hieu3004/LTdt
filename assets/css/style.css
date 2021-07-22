@@ -860,7 +860,7 @@ height:480px !important;
 @media (max-width: 768px) {
 /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
 #camera_wrap_4, #head{
-height:50px !important;
+height:480px !important;
 }
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > .open ul > a {
 	font-size: 13px;

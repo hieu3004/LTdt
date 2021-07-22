@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Interior-Design-Responsive-Website-Templates-StyleInn">
@@ -14,9 +13,6 @@
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen"> 
 	<link rel="stylesheet" href="assets/css/style.css">
     <link rel='stylesheet' id='camera-css'  href='assets/css/camera.css' type='text/css' media='all'> 
-    <script language="JavaScript">alert("Link lấy Source Code:   555565")
-    </script>
-    
 </head>
 <body>
     <!-- MENU -->
@@ -25,7 +21,7 @@
 		<div class="container">
 			<div class="navbar-header"  >
                 <h1 style="margin-top: -5px;">
-                <a href="index.php" style="font-family: 'Times New Roman', Times, serif;">OTAKU</a></h1>
+                <a href="index.php" style="font-family: 'Times New Roman', Times, serif;">Noi that</a></h1>
 			</div>
 			<div class="navbar-collapse collapse">
 				     
@@ -114,7 +110,7 @@
                                 ?>
                                 <li class="col-md-3">
                                     <div class="thumbnail">
-                                        <a href="product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                                        <a href="#"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                                     </div>
                                     <div class="caption">
                                         <div>
@@ -146,7 +142,7 @@
                                 ?>
                                 <li class="col-md-3">
                                     <div class="thumbnail">
-                                        <a href="product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                                        <a href="#"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                                     </div>
                                     <div class="caption">
                                         <div>
@@ -178,7 +174,7 @@
                                 ?>
                                 <li class="col-md-3">
                                     <div class="thumbnail">
-                                        <a href="product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                                        <a href="#"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                                     </div>
                                     <div class="caption">
                                         <div>
@@ -223,7 +219,7 @@
                 <h2><span style="color:red;">Một số sản phẩm dành cho: Phòng ăn </span></h2>
                 <?php 
                     include 'config/config.php';
-                    $sql="SELECT * FROM `sanpham`  where sanpham.makhonggian='PA' and sanpham.trangthai='1' ORDER by RAND() LIMIT 3";
+                    $sql="SELECT * FROM `sanpham`  where sanpham.makhonggian='PA' ORDER by RAND() LIMIT 3";
                     $stm=$obj->prepare($sql);
                     $stm->execute();
                     $data= $stm->fetchALL(PDO::FETCH_ASSOC);
@@ -266,7 +262,7 @@
                 <?php 
                     include 'config/config.php';
 
-                    $sql="SELECT * FROM `sanpham`  where sanpham.makhonggian='PN' and sanpham.trangthai='1' ORDER by RAND() LIMIT 3";
+                    $sql="SELECT * FROM `sanpham`  where sanpham.makhonggian='PN' ORDER by RAND() LIMIT 3";
                     $stm=$obj->prepare($sql);
                     $stm->execute();
                     $data= $stm->fetchALL(PDO::FETCH_ASSOC);
@@ -307,7 +303,7 @@
                 <?php 
                     include 'config/config.php';
 
-                    $sql="SELECT * FROM `sanpham`  where sanpham.makhonggian='PK' and sanpham.trangthai='1' ORDER by RAND() LIMIT 3";
+                    $sql="SELECT * FROM `sanpham`  where sanpham.makhonggian='PK' ORDER by RAND() LIMIT 3";
                     $stm=$obj->prepare($sql);
                     $stm->execute();
                     $data= $stm->fetchALL(PDO::FETCH_ASSOC);
@@ -348,7 +344,7 @@
                 <?php 
                     include 'config/config.php';
 
-                    $sql="SELECT * FROM `sanpham` where sanpham.makhonggian='PLV' and sanpham.trangthai='1'  ORDER by RAND() LIMIT 3 ";
+                    $sql="SELECT * FROM `sanpham` where sanpham.makhonggian='PLV' ";
                     $stm=$obj->prepare($sql);
                     $stm->execute();
                     $data= $stm->fetchALL(PDO::FETCH_ASSOC);
@@ -407,6 +403,8 @@
 							</p>
 						</div>
 					</div>
+
+
 				</div>
 				<!-- /row of panels -->
 			</div>

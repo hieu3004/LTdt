@@ -1,7 +1,11 @@
 <?php
 	include("../config/config.php");
 	if(!isset($_SESSION)) session_start();
-	
+	function postdata($index,$value="")
+	{
+		if(!isset($_POST[$index])) return $value;
+		return $_POST[$index];
+	}
 	$user= isset($_POST['Username'])?$_POST['Username']:'';
 	$pass= isset($_POST['Password'])?$_POST['Password']:'';
 	$pass=md5($pass);
@@ -9,8 +13,7 @@
 	{
 		echo "vui long nhap day du thong tin vao!";
 	}
-	else
-	{
+	else{
 		
 		$sql="SELECT * From khachhang where Usernames=? and Passwords=?";
 		$stm=$obj->prepare($sql);
@@ -24,5 +27,5 @@
 		$_SESSION['khachhang']=$stm->fetch();
 		header('location:index.php');
 		//print_r($_SESSION['khachhang']);
-	}
+	 }
 ?>

@@ -29,7 +29,7 @@
 		<div class="container">
 			<div class="navbar-header"  >
                 <h1 style="margin-top: -5px;">
-                <a href="index.php" style="font-family: 'Times New Roman', Times, serif;">OTAKU</a></h1>
+                <a href="index.php" style="font-family: 'Times New Roman', Times, serif;">Noi that</a></h1>
 			</div>
 			<div class="navbar-collapse collapse">
 				     
@@ -58,7 +58,6 @@
                     <input type="submit" value="Search" style="float:right; height:30px">
                 </form>
             </div>
-            
             <!-- /tìm kiếm -->
     <hr>
 	<!-- /.menu -->
@@ -123,12 +122,12 @@
                                 ?>
                                 <li class="col-md-3">
                                     <div class="thumbnail">
-                                        <a href="product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                                        <a href="#"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                                     </div>
                                     <div class="caption">
                                         <div>
-                                            <div style="color:red;"><?php echo "SALE:".$v['sale']."%" ?></div>
-                                            <div style="color:blue;" ><?php echo "Gia con: ".number_format($v['gia']-=$v['gia']*$v['sale']/100)?>VND</div>
+                                            <div style="color:red;"><?php echo "SALE:".$v['sale']."%" ?> <?php echo number_format($v['gia'])?>VND</div>
+                                            <div style="color:blue;" ><?php echo number_format($v['gia']-=$v['gia']*$v['sale']/100)?>VND</div>
                                             <div><?php echo $v['tensanpham']?></div>
                                         </div>
                                         <div><a class="btn btn-mini" href="cart/qlyCart.php?action=them&masanpham=<?php echo $v['masanpham'] ?>">BUY NOW</a></div>
@@ -155,7 +154,7 @@
                                 ?>
                                 <li class="col-md-3">
                                     <div class="thumbnail">
-                                        <a href="product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                                        <a href="#"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                                     </div>
                                     <div class="caption">
                                         <div>
@@ -187,7 +186,7 @@
                                 ?>
                                 <li class="col-md-3">
                                     <div class="thumbnail">
-                                        <a href="product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                                        <a href="#"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                                     </div>
                                     <div class="caption">
                                         <div>

@@ -20,14 +20,14 @@
 		<div class="container">
 			<div class="navbar-header"  >
                 <h1 style="margin-top: -5px;">
-                <a href="../index.php" style="font-family: 'Times New Roman', Times, serif;">OTAKU</a></h1>
+                <a href="../index.php" style="font-family: 'Times New Roman', Times, serif;">Noi that</a></h1>
 			</div>
 			<div class="navbar-collapse collapse">
 				     
                 <ul class="nav navbar-nav pull-right" style="margin-left: 100px;">
                     <li><a href="../products.php">Products</a></li>
-                    <li><a href="../service.html">Service</a></li>
-                    <li><a href="../about.html">About</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">About</a></li>
 					
                     <li><a href="register.php"><img src="../assets/hinh/buy.png" alt="">CART </a></li>
                     <li><a href="register.php"> Account</a></li>
@@ -57,7 +57,7 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Ten khach hang:</label>
+										<label>Usernames:</label>
 										<input type="text" name="Username" class="form-control">
 									</div>
 								</div>
@@ -65,26 +65,26 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Mat Khau:</label>
+										<label>Password</label>
 										<input type="password" name="pass" class="form-control">
 									</div>
 									
 								</div>
 								<div class="col-md-6" class="form-group" style="float:right;">
-										<label>Nhập lại mật khẩu:</label>
+										<label>Confim Password</label>
 										<input type="password" name="confimpass" class="form-control">
 									</div>
 							</div>
                             <div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Họ và tên:</label>
+										<label>Họ và tên :</label>
 										<input type="text" name="hoten" class="form-control">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Số điện thoại:</label>
+										<label>Số điện thoại :</label>
 										<input type="text" name="sdt" class="form-control" >
 									</div>
 								</div>
@@ -92,14 +92,14 @@
                             <div class="row">
                                 <div class="col-md-6">
 									<div class="form-group">
-										<label>Địa chỉ:</label>
+										<label>Địa chỉ :</label>
 										<input type="text" name="diachi" class="form-control" >
 									</div>
 								</div>
 							
 								<div class="col-md-6">
 									<div class="form-group">
-										<label> Email:</label>
+										<label> Email :</label>
 										<input type="email" name="email" class="form-control" id="">
 									</div>
 								</div>
@@ -113,7 +113,8 @@
 					<div class="col-md-6">
 						<h1>Đã có Tài Khoản!</h1><br>
 						<a href="login.php"><button class="btn btn-two">Đăng nhập</button></a>
-						
+									
+						<label for=""<?php include('them.php')?>></label>
 					</div>
 				</div>
 			</div>

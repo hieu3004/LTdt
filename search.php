@@ -6,11 +6,12 @@
         echo "vui long nhap noi dung";exit;
         
     }
-    $sql="SELECT * FROM sanpham join khonggian on sanpham.makhonggian=khonggian.makhonggian
-     where sanpham.soluong > 0 and sanpham.trangthai='1' and  sanpham.tensanpham like'%$noidung%' or sanpham.gia like'%$noidung%'
-     or sanpham.makhonggian like'%$noidung%'  or khonggian.tenkhonggian like'%$noidung%' ";
-    $stm=$obj->query($sql);
     
+    $sql="SELECT * FROM sanpham join loai on sanpham.maloai=loai.maloai join khonggian on sanpham.makhonggian=khonggian.makhonggian
+     where sanpham.masanpham like '%$noidung%' or sanpham.tensanpham like'%$noidung%' or sanpham.gia like'%$noidung%'
+     or sanpham.makhonggian like'%$noidung%' or loai.tenloai like'%$noidung%' or khonggian.tenkhonggian like'%$noidung%' ";
+    $stm=$obj->prepare($sql);
+    $stm->execute();
     $data = $stm->fetchALL(PDO::FETCH_ASSOC);
     ?>
 <!DOCTYPE html>
@@ -36,7 +37,7 @@
 		<div class="container">
 			<div class="navbar-header"  >
                 <h1 style="margin-top: -5px;">
-                <a href="index.php" style="font-family: 'Times New Roman', Times, serif;">OTAKU</a></h1>
+                <a href="index.php" style="font-family: 'Times New Roman', Times, serif;">Noi that</a></h1>
 			</div>
 			<div class="navbar-collapse collapse">
 				     
@@ -44,7 +45,7 @@
                     <li><a href="products.php">Products</a></li>
                     <li><a href="services.html">Service</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="cart/cart.php"><img src="assets/hinh/buy.png" alt="">CART </a></li>
+                    <li><a href="khachhang/login.php"><img src="assets/hinh/buy.png" alt="">CART </a></li>
                     <li><a href="khachhang/login.php"> Account</a></li>
                 </ul>              
             </div>
@@ -53,16 +54,15 @@
             </div>
 			<!--/.nav-collapse -->
         </div>
-        
-    </div>
-	<!-- /.navbar -->
-    <div  style="background-color: whitesmoke;  margin-right:50px" >
+        <div  style="background-color: whitesmoke;  margin-right:50px" >
             <form action="search.php" enctype="multipart/form-data" method="post" style="background-color: whitesmoke; float:right;height:30px; margin-right:50px">
-                <input type="search" style="width:200px; height:30px "name="noidung" id="">
+                <input type="search" value="<?php echo $noidung ?>" style="width:200px; height:30px "name="noidung" id="">
                 <input type="submit" value="Search" style="float:right; height:30px">
             </form>
         </div>
-        <hr>
+    </div>
+	<!-- /.navbar -->
+    
     <!-- noi dung -->
     <section class="news-box top-margin" >
 
@@ -77,14 +77,14 @@
                     <div class="newsBox">
                         <div class="thumbnail" style="background-color:green;">
                            <div>
-                               <a href="../product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="height:300px; width:300px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                               <a href="#"><img style="height:300px; width:300px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                            </div>
                             
                             <div >
                                 <div style="text-align:center;float:left; width:170px;" ><a href=""><h3><?php echo $v['tensanpham'] ?></h3></a></div>
                                 <div style="text-align:center;float:right; color:blue ; width:170px;"><h3><?php echo number_format($v['gia']) ?>   VND </h3></div>
                             </div>
-                            <div style="float:left;"> <a class="btn btn-mini" href="cart/qlyCart.php?action=them&masanpham=<?php echo $v['masanpham']?>">BUY NOW</a></div>
+                            <div style="float:left;"> <a class="btn btn-mini" href="khachhang/login.php">BUY NOW</a></div>
                         </div>
                     </div>
                 </div>

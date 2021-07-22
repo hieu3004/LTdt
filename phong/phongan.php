@@ -35,7 +35,7 @@
                     <li><a href="services.html">Service</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="../cart/cart.php"><img src="../assets/images/buy.png" alt="">MY CART </a></li>
-                    <li><a href="../khachhang/login.php"> Account</a></li>
+                    <li><a href="../khachhang/login.php"> </a>Account</li>
                 </ul>              
             </div>
             <div>
@@ -80,7 +80,7 @@
                     <div class="newsBox"style="background-color:green;">
                         <div class="thumbnail" >
                            <div>
-                               <a href="../product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="height:300px; width:300px;" src="../assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                               <a href="#"><img style="height:300px; width:300px;" src="../assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                            </div>
                             
                             <div style="background-color:green;">
@@ -121,7 +121,7 @@
                                 ?>
                             <li class="col-md-3">
                                 <div class="thumbnail">
-                                <a href="../product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="width:280px; height:220px;" src="../assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                                <a href="#"><img style="width:280px; height:220px;" src="../assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                                 </div>
                                 <div class="caption" > 
                                         <div style="color:blue;" > <h4>Giá : <?php echo number_format($v['gia'])?> VND</h4></div>

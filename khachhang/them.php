@@ -27,20 +27,12 @@
     {
         if($user=="")
         {
-            echo $err="Tên đăng nhập rỗng <br>";
+            echo $err="ten đăng nhập rỗng <br>";
             
-        }
-        if($pass=="")
-        {
-            echo $err="Mật khẩu không đuợc để trống";
-        }
-        if($confimpass=="")
-        {
-            echo $err="Nhập lai mật khẩu không đuợc để trống";
         }
         if($pass!=$confimpass)
         {
-            echo $err="Mật khẩu nhập lại không chính xác. <br>";
+            echo $err=" mật khẩu nhập lại không chính xác. <br>";
             
         }
         if(strlen($hoten)<6)
@@ -48,32 +40,22 @@
             echo $err="Họ tên phải nhiều hơn 6 ký tự! <br>";
             
         }
-        if(strlen($sdt)!=10 )
+        if(strlen($sdt)<10 )
         {
-            echo $err="Vui long nhap sdt du 10 so! <br>";
+            echo $err="vui long nhap sdt du 11 so! <br>";
         }
         if(checkEMAIL($email)==false)
         {
-            echo $err="Định dạng email không hợp lệ <br>";
+            echo $err="định dạng email không hợp lệ <br>";
         }
         if(!isset($err))
         {
             $pass=md5($pass);
-            $sql="INSERT INTO khachhang(Usernames,Passwords,tenkhachhang,hinh,sdt,email,diachi) 
-            values('$user','$pass','$hoten','photo-4.jpg','$sdt','$email','$diachi')";
-            
-            if($sql!="")
-            {
-                $stm= $obj->query($sql);
-
-
-                // echo '<script language="javascript">alert("Đăng ký thành công"); window.location="register.php";</script>';
-                header('location:login.php');
-            }
-            else
-            { 
-                echo "Bạn vui lòng nhập đầy đủ thông tin!";
-            }
+            $sql="INSERT INTO khachhang(Usernames,Passwords,tenkhachhang,sdt,email,diachi) values('$user','$pass','$hoten','$sdt','$email','$diachi')";
+            $stm= $obj->prepare($sql);
+            $stm->execute();
+            echo "đang ký thành công!";
+            header('location:login.php');
         }
     }
     

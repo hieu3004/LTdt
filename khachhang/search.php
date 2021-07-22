@@ -13,9 +13,9 @@
         
     }
     
-    $sql="SELECT * FROM sanpham  
-     where  sanpham.tensanpham like'%$noidung%' 
-    ";
+    $sql="SELECT * FROM sanpham join loai on sanpham.maloai=loai.maloai join khonggian on sanpham.makhonggian=khonggian.makhonggian
+     where sanpham.masanpham like '%$noidung%' or sanpham.tensanpham like'%$noidung%' or sanpham.gia like'%$noidung%'
+     or sanpham.makhonggian like'%$noidung%' or loai.tenloai like'%$noidung%' or khonggian.tenkhonggian like'%$noidung%' ";
     $stm=$obj->prepare($sql);
     $stm->execute();
     $data = $stm->fetchALL(PDO::FETCH_ASSOC);
@@ -43,7 +43,7 @@
 		<div class="container">
 			<div class="navbar-header"  >
                 <h1 style="margin-top: -5px;">
-                <a href="index.php" style="font-family: 'Times New Roman', Times, serif;">OTAKU</a></h1>
+                <a href="index.php" style="font-family: 'Times New Roman', Times, serif;">Noi that</a></h1>
 			</div>
 			<div class="navbar-collapse collapse">
 				     
@@ -86,7 +86,7 @@
                     <div class="newsBox">
                         <div class="thumbnail" style="background-color:green;">
                            <div>
-                               <a href="product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="height:300px; width:300px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                               <a href="#"><img style="height:300px; width:300px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                            </div>
                             
                             <div >

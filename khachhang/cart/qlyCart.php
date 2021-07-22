@@ -1,17 +1,10 @@
 <?php
-    include '../../config/config.php';
     if(!isset($_SESSION)) session_start();
     $tam=isset($_SESSION['cart'])?$_SESSION['cart']:[];
     $action = isset($_GET['action'])?$_GET['action']:'';
     $user=isset($_SESSION['khachhang'])?$_SESSION['khachhang']:[];
     
-    if($action=="huy")
-    {
-        $madh= isset($_GET['madonhang'])?$_GET['madonhang']:'';
-        $sql="UPDATE donhang Set ngaytao=NOW(), trangthai='Đơn hàng đã bị hủy bởi khách hàng'  where madonhang='{$madh}'";
-        $stm=$obj->query($sql);
-        header('location:cart.php');
-    }
+
     if($action=='them')
     {
         $masp=isset($_GET['masanpham'])?$_GET['masanpham']:'';
