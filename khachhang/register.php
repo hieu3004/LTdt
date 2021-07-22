@@ -57,7 +57,7 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Usernames:</label>
+										<label>Tên đăng nhập*</label>
 										<input type="text" name="Username" class="form-control">
 									</div>
 								</div>
@@ -65,26 +65,26 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Password</label>
+										<label>Mật khẩu*</label>
 										<input type="password" name="pass" class="form-control">
 									</div>
 									
 								</div>
 								<div class="col-md-6" class="form-group" style="float:right;">
-										<label>Confim Password</label>
+										<label>Nhập lại mật khẩu*</label>
 										<input type="password" name="confimpass" class="form-control">
 									</div>
 							</div>
                             <div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Họ và tên :</label>
+										<label>Họ và tên*</label>
 										<input type="text" name="hoten" class="form-control">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Số điện thoại :</label>
+										<label>Số điện thoại*</label>
 										<input type="text" name="sdt" class="form-control" >
 									</div>
 								</div>
@@ -92,14 +92,14 @@
                             <div class="row">
                                 <div class="col-md-6">
 									<div class="form-group">
-										<label>Địa chỉ :</label>
+										<label>Địa chỉ*</label>
 										<input type="text" name="diachi" class="form-control" >
 									</div>
 								</div>
 							
 								<div class="col-md-6">
 									<div class="form-group">
-										<label> Email :</label>
+										<label> Email*</label>
 										<input type="email" name="email" class="form-control" id="">
 									</div>
 								</div>

@@ -56,15 +56,15 @@
                     <img style="width:150px; height:150px;" src="assets/images/<?php echo $_SESSION['khachhang']['hinh']?>" alt="">
                 </tr>
                 <tr>
-                    <td>ID</td>
+                    <td>Mã Khách hàng</td>
                     <td><input type="text" name="" value="<?php echo $_SESSION['khachhang']['makhachhang']?>" id=""></td>
                 </tr>
                 <tr>
-                    <td>tên</td>
+                    <td>Họ và tên</td>
                     <td><input type="text" name="" value="<?php echo $_SESSION['khachhang']['tenkhachhang']?>" id=""></td>
                 </tr>
                 <tr>
-                    <td>số điện thoại</td>
+                    <td>Số điện thoại</td>
                     <td><input type="text" name="" value="<?php echo $_SESSION['khachhang']['sdt']?>" id=""></td>
                 </tr>
                 <tr>
@@ -72,7 +72,7 @@
                     <td><input type="text" name="" value="<?php echo $_SESSION['khachhang']['email']?>" id=""></td>
                 </tr>
                 <tr>
-                    <td>địa chỉ</td>
+                    <td>Địa chỉ</td>
                     <td><input type="text" name="" value="<?php echo $_SESSION['khachhang']['diachi']?>" id=""></td>
                 </tr>
                 <tr>

@@ -45,7 +45,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8">
-					<h1>Điền Thông tin đăng nhập của khách hàng</h1>
+					<h1>XIN CHÀO! Đăng nhập hoặc Tạo tài khoản</h1>
 				</div>
 			</div>
 		</div>
@@ -61,7 +61,7 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Username :</label>
+										<label>Tên đăng nhập*</label>
 										<input type="text" name="Username" class="form-control" placeholder="Username">
 									</div>
 								</div>
@@ -69,7 +69,7 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Password :</label>
+										<label>Mật khẩu*</label>
 										<input type="password" name="Password" class="form-control" placeholder="Password">
 									</div>
 								</div>
@@ -81,7 +81,7 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<h1>Bạn chưa có tài khoản?</h1> <br>
-							<a href="register.php"><button class="btn btn-two">Create New</button></a>
+							<a href="register.php"><button class="btn btn-two">Tạo tài khoản</button></a>
 						</div>
 						
 					</div>

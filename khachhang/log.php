@@ -11,7 +11,7 @@
 	$pass=md5($pass);
 	if(!$user||!$pass)
 	{
-		echo "vui long nhap day du thong tin vao!";
+		echo "Vui lòng điền đầy đủ thông tin!";
 	}
 	else{
 		

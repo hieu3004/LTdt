@@ -27,12 +27,12 @@
     {
         if($user=="")
         {
-            echo $err="ten đăng nhập rỗng <br>";
+            echo $err="Tên đăng nhập rỗng <br>";
             
         }
         if($pass!=$confimpass)
         {
-            echo $err=" mật khẩu nhập lại không chính xác. <br>";
+            echo $err="Mật khẩu nhập lại không chính xác. <br>";
             
         }
         if(strlen($hoten)<6)
@@ -40,13 +40,13 @@
             echo $err="Họ tên phải nhiều hơn 6 ký tự! <br>";
             
         }
-        if(strlen($sdt)<10 )
+        if(strlen($sdt)!=10 )
         {
-            echo $err="vui long nhap sdt du 11 so! <br>";
+            echo $err="Vui lòng nhập SDT đủ 10 so! <br>";
         }
         if(checkEMAIL($email)==false)
         {
-            echo $err="định dạng email không hợp lệ <br>";
+            echo $err="Định dạng email không hợp lệ <br>";
         }
         if(!isset($err))
         {
@@ -54,9 +54,11 @@
             $sql="INSERT INTO khachhang(Usernames,Passwords,tenkhachhang,sdt,email,diachi) values('$user','$pass','$hoten','$sdt','$email','$diachi')";
             $stm= $obj->prepare($sql);
             $stm->execute();
-            echo "đang ký thành công!";
+            //echo '<script language="javascript">alert("Đăng ký thành công"); window.location="register.php";</script>';
+            echo "Đăng ký thành công!";
             header('location:login.php');
         }
+       
     }
     
 ?>

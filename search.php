@@ -3,16 +3,19 @@
     $noidung=isset($_REQUEST['noidung'])?$_REQUEST['noidung']:'';
     if($noidung=='')
     {
-        echo "vui long nhap noi dung";exit;
+        echo "Vui long nhap noi dung";exit;
         
     }
     
-    $sql="SELECT * FROM sanpham join loai on sanpham.maloai=loai.maloai join khonggian on sanpham.makhonggian=khonggian.makhonggian
+    $sql="SELECT * FROM sanpham join loai on 
+    sanpham.maloai=loai.maloai join khonggian on 
+    sanpham.makhonggian=khonggian.makhonggian
      where sanpham.masanpham like '%$noidung%' or sanpham.tensanpham like'%$noidung%' or sanpham.gia like'%$noidung%'
      or sanpham.makhonggian like'%$noidung%' or loai.tenloai like'%$noidung%' or khonggian.tenkhonggian like'%$noidung%' ";
     $stm=$obj->prepare($sql);
     $stm->execute();
     $data = $stm->fetchALL(PDO::FETCH_ASSOC);
+    $soluong = count($data);
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,11 +71,14 @@
 
         <div class="container" style="background-color: whitesmoke ; width:1200px;text-align:center;">
             <div class="row" style="width:1200px;">
+            
             <?php
                
                 foreach($data as $k => $v)
                 {
+                    
             ?>
+            
                 <div class="col-lg-4 col-md-4 col-sm-12" style="width:400px; height:500px; ">
                     <div class="newsBox">
                         <div class="thumbnail" style="background-color:green;">
