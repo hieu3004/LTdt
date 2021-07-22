@@ -58,6 +58,7 @@
                     <input type="submit" value="Search" style="float:right; height:30px">
                 </form>
             </div>
+            
             <!-- /tìm kiếm -->
     <hr>
 	<!-- /.menu -->

@@ -27,20 +27,20 @@
     {
         if($user=="")
         {
-            echo $err="ten đăng nhập rỗng <br>";
+            echo $err="Tên đăng nhập rỗng <br>";
             
         }
         if($pass=="")
         {
-            echo $err="mật khẩu không đucợ để trống";
+            echo $err="Mật khẩu không đuợc để trống";
         }
         if($confimpass=="")
         {
-            echo $err="nhập lai mật khẩu không đucợ để trống";
+            echo $err="Nhập lai mật khẩu không đuợc để trống";
         }
         if($pass!=$confimpass)
         {
-            echo $err=" mật khẩu nhập lại không chính xác. <br>";
+            echo $err="Mật khẩu nhập lại không chính xác. <br>";
             
         }
         if(strlen($hoten)<6)
@@ -48,26 +48,32 @@
             echo $err="Họ tên phải nhiều hơn 6 ký tự! <br>";
             
         }
-        if(strlen($sdt)!=11 )
+        if(strlen($sdt)!=10 )
         {
-            echo $err="vui long nhap sdt du 11 so! <br>";
+            echo $err="Vui long nhap sdt du 10 so! <br>";
         }
         if(checkEMAIL($email)==false)
         {
-            echo $err="định dạng email không hợp lệ <br>";
+            echo $err="Định dạng email không hợp lệ <br>";
         }
         if(!isset($err))
         {
             $pass=md5($pass);
-            $sql="INSERT INTO khachhang(Usernames,Passwords,tenkhachhang,hinh,sdt,email,diachi) values('$user','$pass','$hoten','photo-4.jpg','$sdt','$email','$diachi')";
+            $sql="INSERT INTO khachhang(Usernames,Passwords,tenkhachhang,hinh,sdt,email,diachi) 
+            values('$user','$pass','$hoten','photo-4.jpg','$sdt','$email','$diachi')";
             
             if($sql!="")
             {
                 $stm= $obj->query($sql);
-                echo "đang ký thành công!";
+
+
+                // echo '<script language="javascript">alert("Đăng ký thành công"); window.location="register.php";</script>';
                 header('location:login.php');
             }
-            else{ echo "Ko có";}
+            else
+            { 
+                echo "Bạn vui lòng nhập đầy đủ thông tin!";
+            }
         }
     }
     
