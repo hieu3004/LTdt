@@ -87,7 +87,6 @@
             <div class="row" style="width:1200px;">
             <!-- tiến hành hiển thị sô lượng sản phẩm của 1 trang. -->
             <?php
-                include 'config/config.php';
                 $sql="SELECT * FROM `sanpham` LIMIT $tung_trang,$sp_tung_trang";
                 $stm=$obj->prepare($sql);
                 $stm->execute();
@@ -99,7 +98,7 @@
                     <div class="newsBox">
                         <div class="thumbnail" style="background-color:green;">
                            <div>
-                               <a href="#"><img style="height:300px; width:300px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                               <a href="../khachhang/product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="height:300px; width:300px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                            </div>
                             
                             <div >
@@ -117,11 +116,11 @@
             <div>
                 <?php    
                    // hiển thị thữ tự các trang
-                echo " Trang: <";
+                echo " Trang: ";
                 for($i=1;$i<=$sotrang;$i++)
                 {
                 ?>
-                    <a href="products.php?trang=<?php echo$i ?>"><h1><?php echo$i ?></h1></a>
+                    <a href="products.php?trang=<?php echo$i ?>"><?php echo$i ?></a>
                 <?php
                     }
                 ?>
@@ -152,7 +151,7 @@
                                 ?>
                                 <li class="col-md-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                                        <a href="../khachhang/product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                                     </div>
                                     <div class="caption">
                                         <div>
@@ -215,7 +214,7 @@
                                 ?>
                                 <li class="col-md-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                                        <a href="../product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                                     </div>
                                     <div class="caption">
                                         <div>

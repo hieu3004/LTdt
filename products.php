@@ -94,7 +94,7 @@
                     <div class="newsBox">
                         <div class="thumbnail" style="background-color:green;">
                            <div>
-                               <a href="#"><img style="height:300px; width:300px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                               <a href="../product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="height:300px; width:300px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                            </div>
                             
                             <div >
@@ -145,7 +145,7 @@
                                 ?>
                                 <li class="col-md-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img style="width:280px; height:220px;" src="assets/images<?php echo $v['hinh'] ?>" alt=""></a>
+                                        <a href="../product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="width:280px; height:220px;" src="assets/images<?php echo $v['hinh'] ?>" alt=""></a>
                                     </div>
                                     <div class="caption">
                                         <div>

@@ -84,7 +84,7 @@
                     <div class="newsBox"style="background-color:green;">
                         <div class="thumbnail" >
                            <div>
-                               <a href="#"><img style="height:300px; width:300px;" src="../assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                               <a href="../product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="height:300px; width:300px;" src="../assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                            </div>
                             
                             <div style="background-color:green;">

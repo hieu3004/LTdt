@@ -30,7 +30,7 @@
 		<div class="container">
 			<div class="navbar-header"  >
                 <h1 style="margin-top: -5px;">
-                <a href="../index.php" style="font-family: 'Times New Roman', Times, serif;">OTAKU</a></h1>
+                <a href="../index.php" style="font-family: 'Times New Roman', Times, serif;">Noi that</a></h1>
 			</div>
 			<div class="navbar-collapse collapse">
 				     
@@ -65,7 +65,16 @@
     </div>
     <hr>
     <!-- noi dung -->
+    <?php  
+    include '../config/config.php';
+    if(!isset($_SESSION)) session_start();
+    $tam=isset($_SESSION['cart'])?$_SESSION['cart']:[];
+    $arr=array();
+    if($tam!=null){
+?>
+
     <section class="news-box top-margin"style="background-color: whitesmoke ;  float:center;" >
+   
      <form action="dathang.php" method="post">
         <table border="1" style=" text-align:center;" class="container">
             <tr style="background-color:rgb(95, 94, 94); color:red;width:100%;">
@@ -79,10 +88,7 @@
                 <td>Thao tác</td>
             </tr>
             <?php 
-                include '../config/config.php';
-                if(!isset($_SESSION)) session_start();
-                $tam=isset($_SESSION['cart'])?$_SESSION['cart']:[];
-                $arr=array();
+                
                 $i=0;//biến stt
                 $thanhtien=0;
                 $gia;
@@ -120,7 +126,8 @@
             ?>
            
         </table>
-        <div  class="btn btn-mini" style="background-color:yellow; color: blue; margin-left:174px; ">  Tổng tiền là :
+        <div style=" margin:10px 0 120px 0; ">
+            <div  class="btn btn-mini" style="background-color:yellow; color: blue; margin:0 20px 10px 800px ">  Tổng tiền là :
                 <?php 
                     $tt=0;
                     foreach($arr as $k => $v)
@@ -130,10 +137,18 @@
                     echo number_format($tt).". VND";
                 ?>
             </div>
-            <input class="btn btn-mini"type="submit" name="submit" value=" THANH TOÁN"style="height:40px;width:150px; background-color:blue;"> 
+                <input class="btn btn-mini"type="submit" name="submit" value=" THANH TOÁN"style="height:40px;width:150px; background-color:blue;margin:0 0 10px 0"> 
+        </div>     
              
       </form>
-    </section><!-- /.container -->
+    </section>
+    <?php } 
+      else{ ?>
+          <div style="color: white;text-align: center;">
+            <h2>Chua co san pham trong gio hang</h2>
+            <a class="btn btn-mini" href="../index.php">Tiep tuc mua hang</a>
+        </div>
+      <?php }   ?><!-- /.container -->
     <hr>
 	<!-- don hang khach da dat -->
     <section class="container"  class="news-box top-margin"style="background-color: whitesmoke ;  float:center;" >

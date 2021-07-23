@@ -110,7 +110,7 @@
                                 ?>
                                 <li class="col-md-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                                        <a href="product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                                     </div>
                                     <div class="caption">
                                         <div>
@@ -142,7 +142,7 @@
                                 ?>
                                 <li class="col-md-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                                        <a href="product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                                     </div>
                                     <div class="caption">
                                         <div>
@@ -174,7 +174,7 @@
                                 ?>
                                 <li class="col-md-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
+                                        <a href="product_in.php?masanpham=<?php echo$v['masanpham'] ?>"><img style="width:280px; height:220px;" src="assets/images/<?php echo $v['hinh'] ?>" alt=""></a>
                                     </div>
                                     <div class="caption">
                                         <div>
